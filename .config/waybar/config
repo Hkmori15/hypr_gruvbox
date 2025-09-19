@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["memory", "cpu", "disk", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "default": "·"
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+
+    "clock": {
+        "format": "{:%a %d/%m %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": " {}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": "󰍛 {}%",
+        "tooltip": true
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/"
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}
